@@ -21,8 +21,8 @@
         "chai": "^3.5.0",
         "jest": "^20.0.4",
         "mockdate": "^2.0.1",
-        "prettier": "^1.10.2",
-        "postcss": "^8.2.8"
+        "postcss": "^8.2.8",
+        "prettier": "^1.10.2"
     },
     "jest": {
         "testRegex": "test.js$"
