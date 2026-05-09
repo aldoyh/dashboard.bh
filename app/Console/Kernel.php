@@ -40,7 +40,7 @@ class Kernel extends ConsoleKernel
         $commandDirectories = glob(app_path('Tiles/*'), GLOB_ONLYDIR);
         $commandDirectories[] = app_path('Console');
 
-        collect($commandDirectories)->each(function (string $commandDirectory) {
+        collect($commandDirectories)->each(function (string $commandDirectory): void {
             $this->load($commandDirectory);
         });
     }

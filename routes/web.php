@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('apple-music-token', 'apple-music-token');
 
-Route::middleware(AccessToken::class)->group(function () {
+Route::middleware(AccessToken::class)->group(function (): void {
     Route::get('/', function () {
         $members = collect(cache()->remember('members', now()->addDay(), function () {
             return Http::withToken(config('services.spatie.token'))

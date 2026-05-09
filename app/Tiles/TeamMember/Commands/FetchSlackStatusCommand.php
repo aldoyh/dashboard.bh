@@ -30,7 +30,7 @@ class FetchSlackStatusCommand extends Command
         try {
             $slack
                 ->getMembers($members)
-                ->each(function (Member $member) {
+                ->each(function (Member $member): void {
                     TeamMemberStore::find(strtolower($member->name))->setStatusEmoji($member->statusEmoji);
                 });
         } catch (ClientException $e) {

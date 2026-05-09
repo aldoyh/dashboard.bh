@@ -62,7 +62,7 @@ class FetchCurrentTracksCommand extends Command
     {
         $this->info('Fetching current tracks');
 
-        collect($this->getUsers())->each(function ($config, $teamMemberName) {
+        collect($this->getUsers())->each(function ($config, $teamMemberName): void {
             $teamMemberStore = TeamMemberStore::find($teamMemberName);
 
             if (! $config['key']) {
