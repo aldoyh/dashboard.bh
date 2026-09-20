@@ -31,6 +31,8 @@ _ide_helper*.php
 /public/media
 /public/mix-manifest.json
 package-lock.json
+bun.lock
+bun.lockb
 daily-dashboard/
 
 # Logs & Databases
