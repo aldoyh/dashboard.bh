@@ -1,14 +1,48 @@
-_ide_helper*.php
-.env
-.php_cs.cache
+# Laravel Core
+/vendor
 /node_modules
-/npm-debug.log
+/public/hot
+/public/storage
+/storage/*.key
+/storage/framework/views/*
+/storage/framework/sessions/*
+/storage/framework/cache/*
+/storage/logs/*
+!/storage/framework/views/.gitignore
+!/storage/framework/sessions/.gitignore
+!/storage/framework/cache/.gitignore
+!/storage/logs/.gitignore
+/bootstrap/cache/*.php
+!/bootstrap/cache/.gitignore
+.env
+.env.backup
+.env.testing
+.phpunit.result.cache
+.phpunit.cache
+Homestead.json
+Homestead.yaml
+
+# Project Specific (Retained from original)
+_ide_helper*.php
+.php_cs.cache
 /public/build
 /public/css
 /public/js
 /public/media
 /public/mix-manifest.json
-/vendor
 package-lock.json
-
 daily-dashboard/
+
+# Logs & Databases
+npm-debug.log
+yarn-error.log
+database/database.sqlite
+database/database.sqlite-journal
+
+# OS & IDE
+.DS_Store
+.idea
+.vscode
+.fleet
+*.swp
+*.swo

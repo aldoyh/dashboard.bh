@@ -3,3 +3,67 @@
 @import './components/*';
 
 @tailwind utilities;
+
+/* Premium Dark Mode Glassmorphism Theme */
+:root {
+    --bg-screen: #0f172a; /* Deep slate background */
+    --bg-tile: rgba(30, 41, 59, 0.45);
+    --text-default: #f8fafc;
+    --text-accent: #38bdf8;
+    --text-dimmed: #94a3b8;
+    --tile-spacing: 1.25rem;
+    --tile-padding: 1.5rem;
+}
+
+body {
+    background-color: var(--bg-screen);
+    background-image: radial-gradient(circle at top left, rgba(76, 29, 149, 0.25), transparent 40%),
+                      radial-gradient(circle at bottom right, rgba(56, 189, 248, 0.15), transparent 50%);
+    background-attachment: fixed;
+    color: var(--text-default);
+    font-family: 'Inter', 'Outfit', sans-serif;
+}
+
+/* Enhancing Spatie Dashboard default grids */
+.bg-canvas {
+    background: transparent !important;
+}
+
+.bg-canvas > div {
+    /* Target the tiles */
+    background: var(--bg-tile) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3) !important;
+    border-radius: 1rem !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.bg-canvas > div:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4) !important;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Add stagger animation delay for tiles */
+.bg-canvas > div:nth-child(1) { animation-delay: 0.1s; }
+.bg-canvas > div:nth-child(2) { animation-delay: 0.15s; }
+.bg-canvas > div:nth-child(3) { animation-delay: 0.2s; }
+.bg-canvas > div:nth-child(4) { animation-delay: 0.25s; }
+.bg-canvas > div:nth-child(5) { animation-delay: 0.3s; }
+.bg-canvas > div:nth-child(6) { animation-delay: 0.35s; }
+.bg-canvas > div:nth-child(n+7) { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

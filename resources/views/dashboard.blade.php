@@ -29,7 +29,7 @@
 
     <livewire:attendances-tile position="d1:d6" />
 
-    <livewire:calendar-tile position="e7:e20" :calendar-id="config('google-calendar.calendar_id')" />
+    <livewire:calendar-tile position="e7:e14" :calendar-id="config('google-calendar.calendar_id')" />
 
     <livewire:statistics-tile position="d12:d20" />
     <livewire:coffee-tile position="d7:d11" total-offset="20247" />
@@ -37,7 +37,7 @@
     <livewire:fathom-tile position="b11:b20" siteId="GSENXMLW" label="📯 Mailcoach" />
     <livewire:fathom-tile position="c11:C20" siteId="LBABKDJB" label="🎆 Flare" />
 
-    <livewire:oh-dear-uptime-tile position="e7:e16" />
+    <livewire:oh-dear-uptime-tile position="e15:e20" />
 
     <livewire:time-weather-tile position="e1:e6" />
 </x-dashboard>
